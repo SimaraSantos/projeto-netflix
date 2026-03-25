@@ -1,0 +1,96 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    /* Define a fonte padrão para o texto */
+    background-color: #141414;
+    /* Define a cor de fundo como preto escuro */
+    color: #ffffff;
+    /* Define a cor do texto como branco */
+    margin: 0;
+    /* Remove as margens padrão */
+    padding: 0;
+    /* Remove os espaçamentos internos padrão */
+    display: flex;
+    /* Define o layout como flexbox */
+    justify-content: center;
+    /* Centraliza o conteúdo horizontalmente */
+    align-items: center;
+    /* Centraliza o conteúdo verticalmente */
+    height: 100vh;
+    /* Define a altura da tela como 100% da altura da viewport */
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    /* Centraliza o texto */
+    margin-bottom: 20px;
+    /* Adiciona um espaçamento abaixo do cabeçalho */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    /* Define o tamanho da fonte do título */
+    font-weight: bold;
+    /* Define o peso da fonte como negrito */
+}
+
+header p {
+    font-size: 1.2rem;
+    /* Define o tamanho da fonte do parágrafo */
+    color: #b3b3b3;
+    /* Define a cor do texto como cinza claro */
+}
+
+/* Seção de perfis */
+.profiles {
+    display: flex;
+    /* Define o layout como flexbox */
+    gap: 20px;
+    /* Adiciona um espaçamento entre os itens */
+    justify-content: center;
+    /* Centraliza os itens horizontalmente */
+}
+
+.profile {
+    text-align: center;
+    /* Centraliza o texto dentro de cada perfil */
+    cursor: pointer;
+    /* Altera o cursor para indicar que o elemento é clicável */
+    transition: transform 0.3s ease;
+    /* Adiciona uma transição suave ao transformar o elemento */
+}
+
+.profile img {
+    width: 150px;
+    /* Define a largura da imagem */
+    height: 150px;
+    /* Define a altura da imagem */
+    border-radius: 8px;
+    /* Adiciona cantos arredondados à imagem */
+    border: 3px solid transparent;
+    /* Define uma borda transparente */
+    transition: border-color 0.3s ease, transform 0.3s ease;
+    /* Adiciona transições suaves para a cor da borda e transformação */
+}
+
+.profile img:hover {
+    border-color: #eff;
+    /* Altera a cor da borda para vermelho ao passar o mouse */
+    transform: scale(1.1);
+    /* Aumenta ligeiramente o tamanho da imagem ao passar o mouse */
+}
+
+.profile p {
+    margin-top: 10px;
+    /* Adiciona um espaçamento acima do texto */
+    font-size: 1rem;
+    /* Define o tamanho da fonte do texto */
+    color: #ffffff;
+    /* Define a cor do texto como branco */
+}
+
+.profile:hover {
+    transform: scale(1.05);
+    /* Aumenta ligeiramente o tamanho do perfil ao passar o mouse */
+}

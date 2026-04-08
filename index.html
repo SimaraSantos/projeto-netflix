@@ -14,16 +14,32 @@
         <p>Selecione um perfil para começar</p>
     </header>
     <section class="profiles">
-        <article class="profile">
-            <img src="assets/imagem10.jpg"
-                alt="Avatar circular de Monkey D. Luffy sorrindo com sinal de positivo, vestindo seu chapéu de palha clássico sobre um fundo de ilha tropical.">
-            <p>Luffy</p>
-        </article>
-        <article class="profile">
-            <img src="assets/imagem11.jpg" alt="Imagem de um coração de gelo azul em meio a neve.">
-            <p>Vandinha Addams</p>
-        </article>
+        <ul>
+            <li class="profile">
+                <a href="catalogo/catalogo.html" class="perfil"
+                    onclick="setActiveProfile('Luffy', '../assets/imagem10.jpg')">
+                    <img src="assets/imagem10.jpg"
+                        alt="Avatar circular de Monkey D. Luffy sorrindo com sinal de positivo, vestindo seu chapéu de palha clássico sobre um fundo de ilha tropical.">
+                    <p>Luffy</p>
+                </a>
+            </li>
+            <li class="profile">
+                <a href="catalogo/catalogo.html" class="perfil"
+                    onclick="setActiveProfile('Vandinha Addams', '../assets/imagem11.jpg')">
+                    <img src="assets/imagem11.jpg" alt="Imagem de um coração de gelo azul em meio a neve.">
+                    <p>Vandinha Addams</p>
+                </a>
+            </li>
+        </ul>
     </section>
+    <script src="assets/script.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        function setActiveProfile(name, image) {
+            localStorage.setItem('perfilAtivoNome', name);
+            localStorage.setItem('perfilAtivoImagem', image);
+        }
+    </script>
 </body>
 
 </html>

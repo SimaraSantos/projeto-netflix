@@ -11,6 +11,7 @@ body {
     padding: 0;
     /* Remove os espaçamentos internos padrão */
     display: flex;
+    flex-direction: column;
     /* Define o layout como flexbox */
     justify-content: center;
     /* Centraliza o conteúdo horizontalmente */
@@ -24,7 +25,7 @@ body {
 header {
     text-align: center;
     /* Centraliza o texto */
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     /* Adiciona um espaçamento abaixo do cabeçalho */
 }
 
@@ -43,13 +44,21 @@ header p {
 }
 
 /* Seção de perfis */
-.profiles {
+.profiles ul {
     display: flex;
     /* Define o layout como flexbox */
-    gap: 20px;
+    gap: 1rem;
     /* Adiciona um espaçamento entre os itens */
     justify-content: center;
     /* Centraliza os itens horizontalmente */
+    flex-wrap: wrap;
+    /* Permite que os itens quebrem linha em telas menores */
+    list-style: none;
+    /* Remove os marcadores da lista */
+    padding: 0;
+    /* Remove o espaçamento interno padrão da lista */
+    margin: 0;
+    /* Remove as margens padrão da lista */
 }
 
 .profile {
@@ -75,7 +84,7 @@ header p {
 }
 
 .profile img:hover {
-    border-color: #eff;
+    border-color: #e50914;
     /* Altera a cor da borda para vermelho ao passar o mouse */
     transform: scale(1.1);
     /* Aumenta ligeiramente o tamanho da imagem ao passar o mouse */
@@ -93,4 +102,69 @@ header p {
 .profile:hover {
     transform: scale(1.05);
     /* Aumenta ligeiramente o tamanho do perfil ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    body {
+        flex-direction: column;
+        /* Alinha os elementos verticalmente em telas menores */
+        height: auto;
+        /* Permite que o conteúdo ocupe mais espaço vertical */
+        padding: 20px;
+        /* Adiciona espaçamento interno nas laterais */
+    }
+
+    header h1 {
+        font-size: 2rem;
+        /* Reduz o tamanho do título em telas menores */
+    }
+
+    header p {
+        font-size: 1rem;
+        /* Reduz o tamanho do parágrafo em telas menores */
+    }
+
+    .profile img {
+        width: 120px;
+        /* Reduz a largura da imagem em telas menores */
+        height: 120px;
+        /* Reduz a altura da imagem em telas menores */
+    }
+
+    .profiles {
+        gap: 15px;
+        /* Reduz o espaçamento entre os itens em telas menores */
+    }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+        /* Reduz ainda mais o tamanho do título em telas muito pequenas */
+    }
+
+    header p {
+        font-size: 0.9rem;
+        /* Reduz ainda mais o tamanho do parágrafo em telas muito pequenas */
+    }
+
+    .profile img {
+        width: 100px;
+        /* Reduz ainda mais a largura da imagem em telas muito pequenas */
+        height: 100px;
+        /* Reduz ainda mais a altura da imagem em telas muito pequenas */
+    }
+
+    .profiles {
+        gap: 10px;
+        /* Reduz ainda mais o espaçamento entre os itens em telas muito pequenas */
+    }
+}
+
+@media (min-width: 900px) {
+    .profiles {
+        flex-direction: row;
+        /* Retorna os perfis para a disposição horizontal em telas maiores */
+    }
 }
